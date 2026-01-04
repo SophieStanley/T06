@@ -1,0 +1,128 @@
+.hero {
+  padding: 0;
+}
+.hero-media {
+  position: relative;
+}
+.hero-video {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 10px 14px;
+}
+.hero-content h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  font-family: "spicy rice", serif;
+  color: #efe8dc;
+  -webkit-text-stroke-color: #075672;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 3px 3px #075672;
+  letter-spacing: 0.05em;
+}
+.intro {
+  padding: 16px 12px 0;
+}
+.intro-image {
+  display: none;
+}
+.intro-card {
+  background: #efe8dc;
+  border: 2px solid #075672;
+  border-radius: 18px;
+  padding: 18px 14px;
+  text-align: center;
+}
+.intro-card h2 {
+  margin: 0 0 10px;
+  font-family: "poppins", sans-serif;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.intro-card p {
+  margin: 0 0 14px;
+  line-height: 1.35;
+  font-family: "inter", sans-serif;
+  font-size: 15px;
+}
+.cta-button {
+  display: inline-block;
+  text-decoration: underline;
+  color: #efe8dc;
+  border: 2px solid #f399a4;
+  background: #f399a4;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-family: "inter", sans-serif;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .hero-video {
+    height: 570px;
+  }
+  .hero-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 18px 16px;
+  }
+  .hero-content h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .intro {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 26px 18px 0;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 22px;
+    align-items: center;
+  }
+
+  .intro-image {
+    display: block;
+    width: 100%;
+    height: 500px;
+    background: #075672;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .intro-card {
+    height: 500px;
+    padding: 22px 18px;
+    border-radius: 18px;
+    text-align: center;
+  }
+  .intro-card h2 {
+    font-size: 30px;
+    margin: 0 0 10px;
+    letter-spacing: 0.04em;
+  }
+  .intro-card p {
+    font-size: 20px;
+    margin: 0 0 10px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .cta-button {
+    width: 80%;
+  }
+}

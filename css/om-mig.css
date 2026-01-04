@@ -1,0 +1,228 @@
+main.om-mig {
+  position: relative;
+  min-height: 100vh;
+  padding: 12px;
+}
+.main-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.main-bg_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main.om-mig > section {
+  position: relative;
+  z-index: 1;
+}
+.om-intro_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.om-intro_media {
+  display: grid;
+  place-items: center;
+}
+.om-intro_media img {
+  width: 500px;
+  height: auto;
+  display: block;
+}
+.about-intro_content h1 {
+  margin: 0;
+  color: #efe8dc;
+  -webkit-text-stroke-color: #075672;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 3px 3px #075672;
+  font-size: 30px;
+  font-family: "spicy rice", sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.about-intro_content p {
+  margin: 0;
+  padding: 16px 8px;
+  text-align: center;
+  color: #075672;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  line-height: 1.35;
+}
+.om-skills {
+  margin-top: 12px;
+  text-align: center;
+}
+.om-skills h2 {
+  margin: 10px 0 8px;
+  color: #075672;
+  border: 2px solid #075672;
+  border-radius: 18px;
+  padding: 10px 8px;
+  font-size: 20px;
+  font-family: "poppins", sans-serif;
+  letter-spacing: 0.04em;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.skills-list_item {
+  background: #f399a4;
+  border-radius: 18px;
+  padding: 10px 8px;
+  color: #efe8dc;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+.om-reflektion {
+  margin-top: 14px;
+  text-align: center;
+  padding: 2px 6px;
+}
+.om-reflektion h2 {
+  margin: 6px 0 8px;
+  color: #efe8dc;
+  -webkit-text-stroke-color: #075672;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 3px 3px #075672;
+  font-size: 30px;
+  font-family: "spicy rice", sans-serif;
+  letter-spacing: 0.04em;
+}
+.om-reflektion p {
+  margin: 0 0 10px;
+  color: #075672;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  line-height: 1.35;
+}
+.om-reflektion p b {
+  display: inline-block;
+  font-weight: 700;
+}
+.om-cta {
+  margin-top: 10px;
+}
+.om-cta_buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.om-cta_btn {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #f399a4;
+  border-radius: 18px;
+  padding: 12px 8px;
+  color: #efe8dc;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+  text-decoration: underline;
+  letter-spacing: 0.04em;
+}
+@media (min-width: 768px) {
+  main.om-mig {
+    padding: 22px 18px 0;
+  }
+  .om-intro,
+  .om-skills,
+  .om-reflektion,
+  .om-cta {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .om-intro {
+    margin-top: 18px;
+  }
+  .om-intro_grid {
+    grid-template-columns: 450px 1fr;
+    gap: 18px;
+    align-items: start;
+    text-align: center;
+  }
+  .om-intro_media {
+    justify-items: start;
+  }
+  .om-intro_media img {
+    width: 600px;
+    max-width: 200%;
+    height: 350px;
+  }
+  .about-intro_content h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 12px;
+  }
+  .about-intro_content p {
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 20px;
+    line-height: 1.55;
+    max-width: 90ch;
+  }
+  .om-skills {
+    margin-top: 18px;
+  }
+  .om-skills h2 {
+    font-size: 30px;
+    max-width: px;
+    margin: 0 auto 12px;
+  }
+  .skills-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .skills-list_item {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .om-reflektion {
+    margin-top: 22px;
+    padding: 0 10px;
+  }
+  .om-reflektion h2 {
+    font-size: 50px;
+  }
+  .om-reflektion p {
+    max-width: 78ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .om-reflektion p:first-of-type {
+    margin-bottom: 14px;
+  }
+  .om-cta {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  .om-cta_buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+
+  .om-cta_btn {
+    padding: 14px 12px;
+    border-radius: 18px;
+    font-size: 20px;
+  }
+}

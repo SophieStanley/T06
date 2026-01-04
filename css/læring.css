@@ -1,0 +1,161 @@
+main.læring {
+  min-height: 100vh;
+  padding: 12px;
+}
+.læring-intro_card {
+  background: #efe8dc;
+  border: 2px solid #075672;
+  border-radius: 18px;
+  padding: 14px 12px;
+  text-align: center;
+}
+.læring-intro_card h1 {
+  margin: 0 0 8px;
+  color: #efe8dc;
+  -webkit-text-stroke-color: #075672;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 3px 3px #075672;
+  font-size: 30px;
+  font-family: "spicy rice", sans-serif;
+  letter-spacing: 0.04em;
+}
+.læring-intro_card p {
+  margin: 0;
+  color: #075672;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  line-height: 1.35;
+}
+.læring-grid {
+  margin-top: 14px;
+}
+.læring-grid_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.læring-tile {
+  position: relative;
+  padding: 0;
+  border: 2px solid #075672;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+}
+.læring-tile {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  color: inherit;
+}
+.læring-tile_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.læring-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(243, 153, 164, 0.55);
+}
+.læring-tile_label {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  text-align: center;
+  color: #075672;
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: underline;
+  letter-spacing: 0.04em;
+}
+.læring-tile:focus-visible {
+  outline: 2px solid rgba(7, 86, 114, 0.35);
+}
+.læring-tile:hover::after {
+  background: rgba(243, 153, 164, 0.45);
+}
+.modal {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+.modal::backdrop {
+  background: rgba(7, 86, 114, 0.45);
+}
+.modal_box {
+  margin: auto;
+  width: 85vw;
+  height: 60vh;
+  background: #efe8dc;
+  border: 2px solid #075672;
+  border-radius: 18px;
+  padding: 20px;
+  color: #075672;
+  overflow-y: auto;
+}
+.modal_close {
+  border: none;
+  background: transparent;
+  color: #075672;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+.modal_box h2 {
+  margin: 6px 0 10px;
+  font-size: 20px;
+  font-family: "poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.modal_box p {
+  margin: 0;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  line-height: 1.35;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .modal[open] .modal_box {
+    animation: popIn 180ms ease-out;
+  }
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .læring-intro_card h1 {
+    font-size: 50px;
+  }
+  .læring-intro_card p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .læring-tile_label {
+    font-size: 20px;
+  }
+  .modal_box h2 {
+    font-size: 30px;
+  }
+  .modal_box p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

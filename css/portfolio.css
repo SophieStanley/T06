@@ -1,0 +1,244 @@
+.portfolio {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.main-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.main-bg_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio-content {
+  position: relative;
+  z-index: 1;
+  padding: 12px;
+}
+
+.card-intro {
+  border: 2px solid #075672;
+  border-radius: 18px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.card_media {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.card_img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+}
+.card_title {
+  margin: 0 0 6px;
+  font-size: 30px;
+  font-family: "spicy rice", serif;
+  line-height: 1.1;
+  color: #efe8dc;
+  -webkit-text-stroke-color: #075672;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 3px 3px #075672;
+}
+.card_text {
+  margin: 0;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  line-height: 1.35;
+  color: #075672;
+}
+.portfolio-carousel {
+  margin-top: 14px;
+}
+.card-carousel {
+  background-color: #f399a440;
+
+  border-radius: 20px;
+  padding: 10px 10px 20px;
+}
+.card_heading {
+  margin: 0 0 10px;
+  text-align: center;
+  color: #075672;
+  font-size: 25px;
+  font-family: "poppins", sans-serif;
+  letter-spacing: 0.04em;
+}
+.carousel {
+  display: grid;
+  grid-template-columns: 35px 1fr 35px;
+  gap: 10px;
+  align-items: center;
+}
+.carousel_btn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+  color: #075672;
+  font-size: 40px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel_viewport {
+  background: #efe8dc;
+  border: 2px solid #075672;
+  border-radius: 16px;
+  padding: 10px;
+  overflow: hidden;
+}
+.carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+.carousel_figure {
+  margin: 0;
+}
+.carousel_figure img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #075672;
+}
+
+.carousel-slide h2 {
+  margin: 10px 0 6px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "poppins", sans-serif;
+  color: #075672;
+  letter-spacing: 0.04em;
+}
+
+.carousel-slide p {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-family: "inter", sans-serif;
+  line-height: 1.35;
+  color: #075672;
+  text-align: center;
+}
+
+.carousel-slide a {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: #075672;
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .portfolio-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 26px 18px 0;
+  }
+  .card-intro {
+    padding: 22px;
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+  .card_img {
+    max-width: 200px;
+  }
+  .card_title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .card_text {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .portfolio-carousel {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .card-carousel {
+    padding: 22px 30px 30px;
+    border-radius: 18px;
+  }
+  .card_heading {
+    font-size: 30px;
+    margin-bottom: 14px;
+  }
+  .carousel {
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .carousel_viewport {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .carousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    font-size: 44px;
+    cursor: pointer;
+  }
+  .carousel_btn--prev {
+    left: 12px;
+  }
+  .carousel_btn--next {
+    right: 12px;
+  }
+
+  .carousel_btn[disabled] {
+    opacity: 0.35;
+    cursor: default;
+  }
+  .carousel-slide {
+    padding: 35px 35px 35px;
+  }
+  .carousel_figure img {
+    height: 360px;
+    border-radius: 18px;
+  }
+  .carousel-slide h2 {
+    font-size: 30px;
+    margin-top: 14px;
+  }
+  .carousel-slide p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .carousel-slide a {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
