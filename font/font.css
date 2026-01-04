@@ -1,6 +1,7 @@
 @font-face {
   font-family: "spicy rice";
   src: url(../font/SpicyRice-Regular.woff2);
+  font-display: swap;
 }
 @font-face {
   font-family: "poppins";
